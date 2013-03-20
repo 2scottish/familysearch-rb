@@ -60,6 +60,11 @@ module FamilySearch
     def get_discovery
       result = @agent.get(ENV_CONF[@environment][:discovery_path])
       result.body
-    end    
+    end
+    
+    def get(url)
+      result = @agent.get(url)
+      result.body
+    end
   end
 end
