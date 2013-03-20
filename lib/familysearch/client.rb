@@ -56,11 +56,6 @@ module FamilySearch
       @agent.authorization('Bearer',@access_token)
     end
     
-    def get(url)
-      result = @agent.get(url)
-      result.body
-    end
-    
     private
     def get_discovery
       result = @agent.get(ENV_CONF[@environment][:discovery_path])
